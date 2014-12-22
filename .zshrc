@@ -164,6 +164,9 @@ alias dps="docker ps"
 # export DOCKER_HOST=tcp://192.168.59.103:2375
 # export DOCKER_CERT_PATH=/Users/whitech0c0/.boot2docker/certs/boot2docker-vm
 # export DOCKER_TLS_VERIFY=1
+if [ "`boot2docker status`" = "running" ]; then
+    $(boot2docker shellinit)
+fi
 
 # aliases
 alias= be="bundle exec"

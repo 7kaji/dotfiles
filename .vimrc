@@ -51,6 +51,8 @@ inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+" ショートカット
+map <C-n> :NERDTree<CR>
 
 "---------------------------
 " Start Neobundle Settings.
@@ -64,6 +66,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " neobundle自体をneobundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'scrooloose/nerdtree'
  
 call neobundle#end()
  
