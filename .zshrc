@@ -88,9 +88,11 @@ export PATH=/usr/local/bin:$PATH
 
 # golang
 if [ -x "`which go`" ]; then
-  export GOROOT=`go env GOROOT`
-  export GOPATH=$HOME/go
-  export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+  # export GOROOT=`go env GOROOT`
+  # export GOPATH=$HOME/go
+  # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+  export GOPATH=~/go
+  export PATH=$PATH:$GOPATH/bin
 fi
 
 # peco
@@ -169,16 +171,19 @@ if [ "`boot2docker status`" = "running" ]; then
 fi
 
 # aliases
-alias= be="bundle exec"
-alias= bx="bundle exec"
+alias be="bundle exec"
+alias bx="bundle exec"
 
 export PATH=/usr/local/sbin:$PATH
 
+# Google Cloud SDK
+export PATH=/Users/white/google-cloud-sdk/bin:$PATH
+ 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/whitech0c0/google-cloud-sdk/path.zsh.inc'
-
+source '/Users/white/google-cloud-sdk/path.zsh.inc'
+ 
 # The next line enables bash completion for gcloud.
-source '/Users/whitech0c0/google-cloud-sdk/completion.zsh.inc'
+source '/Users/white/google-cloud-sdk/completion.zsh.inc'
 
-export PATH=/Users/whitech0c0/google-cloud-sdk/bin:$PATH
-
+# alias
+alias git merge="git merge --no-ff"

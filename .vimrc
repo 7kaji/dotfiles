@@ -35,7 +35,7 @@ if has("mouse")                     " use mouse
   set mouse=a
 end
 
-colorscheme railscasts
+colorscheme railscats
 
 " 自動的に閉じ括弧を入力
 inoremap { {}<LEFT>
